@@ -1,0 +1,15 @@
+{
+  "name": "后厨",
+  "tagline": "食材、火候、调味里的化学与系统",
+  "category": "烟火日常",
+  "icon": "🍳",
+  "description": "一家老牌中餐厅「鼎记」的后厨。猛火灶台、备菜砧板、调料墙、蒸笼区之间，主厨、二灶、砧板阿姨、学徒、采购、洗碗工协作运转。火候是信仰，备料顺序决定一切，一道菜的成败在出菜前 30 秒。",
+  "demoConcept": "催化剂",
+  "theme": {
+    "primary": "#D35400",
+    "secondary": "#27AE60",
+    "background": "#FFF8F0",
+    "textPrimary": "#3D2B1F",
+    "cardBg": "#FFFFFF"
+  }
+}

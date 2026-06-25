@@ -1,0 +1,15 @@
+{
+  "name": "电竞",
+  "tagline": "反应、决策、团队与版本的战场",
+  "category": "数字竞技",
+  "icon": "🎮",
+  "description": "一支二线电竞俱乐部的训练基地。五个选手加一个替补挤在电竞房里，外设 sponsors 的贴纸还没撕干净。每天训练十小时，复盘到凌晨。教练、数据分析师、队医、领队、粉丝群管理员，所有人都在为版本更新和选手状态焦虑。这里的胜负以毫秒计，但真正的战争往往在屏幕外。",
+  "demoConcept": "反应链",
+  "theme": {
+    "primary": "#6A1B9A",
+    "secondary": "#00BCD4",
+    "background": "#F3E5F5",
+    "textPrimary": "#1A1A1A",
+    "cardBg": "#FFFFFF"
+  }
+}

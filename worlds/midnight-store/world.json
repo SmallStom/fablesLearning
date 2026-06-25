@@ -1,0 +1,15 @@
+{
+  "name": "零点便利店 × 12号院",
+  "tagline": "一条老街，24小时便利店，出租楼里的人生百态",
+  "category": "现代市井",
+  "icon": "🏪",
+  "description": "用深夜便利店和城中村出租楼里的日常，解释一切抽象概念。这里有店长老周、考研的小夏、外卖员阿浩、主播小鹿……同一群人，在两套空间规则下呈现完全不同的行为面貌。",
+  "demoConcept": "活人感",
+  "theme": {
+    "primary": "#2C3E50",
+    "secondary": "#E67E22",
+    "background": "#FAFAF5",
+    "textPrimary": "#2C3E50",
+    "cardBg": "#FFFFFF"
+  }
+}

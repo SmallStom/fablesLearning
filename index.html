@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#2C3E50" />
+    <link rel="icon" href="/icons/icon.svg" />
+    <link rel="apple-touch-icon" href="/icons/icon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="世界观" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- 基础 SEO -->
+    <title>世界观 — 用熟悉的世界，理解陌生的概念</title>
+    <meta name="description" content="世界观是一个 AI 学习工具：选一个你熟悉的世界（武林、三国、后厨、医院、足球场……），输入一个陌生概念，AI 会在那个世界里用一则寓言把它讲明白。" />
+    <meta name="keywords" content="AI学习,概念解释,寓言,教育,知识理解,世界观,类比学习" />
+    <meta name="author" content="世界观" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="世界观 — 用熟悉的世界，理解陌生的概念" />
+    <meta property="og:description" content="选一个你熟悉的世界，输入一个陌生概念，AI 用一则寓言把它讲明白。" />
+    <meta property="og:site_name" content="世界观" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:image" content="/icons/icon.svg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="世界观 — 用熟悉的世界，理解陌生的概念" />
+    <meta name="twitter:description" content="选一个你熟悉的世界，输入一个陌生概念，AI 用一则寓言把它讲明白。" />
+    <meta name="twitter:image" content="/icons/icon.svg" />
+  </head>
+  <body>
+    <!-- 在 React 渲染前应用主题，避免暗色模式闪烁 -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('worldview_theme');
+          var dark = saved !== null
+            ? saved === 'dark'
+            : window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (dark) document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

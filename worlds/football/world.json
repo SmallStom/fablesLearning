@@ -1,0 +1,15 @@
+{
+  "name": "足球场",
+  "tagline": "九十分钟里的博弈、协作与极限",
+  "category": "竞技体育",
+  "icon": "⚽",
+  "description": "一座拥有六十年历史的社区足球场，草皮不算完美，看台能坐三千人。这里每周有业余联赛、青训营和野球局。前锋、中场、后卫、门将、教练、裁判、场务、球迷，所有人都被九十分钟的比赛节奏支配。战术板上的箭头会骗人，但草皮上的汗水不会。",
+  "demoConcept": "边际效应",
+  "theme": {
+    "primary": "#1B5E20",
+    "secondary": "#FFC107",
+    "background": "#F1F8E9",
+    "textPrimary": "#1A1A1A",
+    "cardBg": "#FFFFFF"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "代码即世界",
+  "tagline": "编译、重构、并发里的工程哲学",
+  "category": "数字宇宙",
+  "icon": "💻",
+  "description": "一个正在运行的大型系统内部世界。源码树、内存堆、调用栈、Git 仓库、消息队列、编译器神殿之间，编译器、架构师、调试器、线程、GC 守护者、重构机器人各司其职。每个进程都以为自己是主角，资源有限竞争永恒。",
+  "demoConcept": "并发",
+  "theme": {
+    "primary": "#1E1E1E",
+    "secondary": "#00FF41",
+    "background": "#F8F8F8",
+    "textPrimary": "#1E1E1E",
+    "cardBg": "#FFFFFF"
+  }
+}

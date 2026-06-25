@@ -1,0 +1,54 @@
+@import url('https://fonts.loli.net/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 亮色模式 CSS 变量 */
+:root {
+  --bg-color: #FAFAF5;
+  --text-color: #2C3E50;
+  --card-bg: #ffffff;
+  --text-primary: #2C3E50;
+  --text-secondary: #6b7280;
+  --border-color: #f3f4f6;
+}
+
+/* 暗色模式 CSS 变量 */
+.dark {
+  --bg-color: #1a1a2e;
+  --text-color: #e2e8f0;
+  --card-bg: #16213e;
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --border-color: #334155;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+/* 沉浸式阅读：寓言正文 */
+.fable-content {
+  font-family: 'Noto Serif SC', 'Source Han Serif SC', serif;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #2C2C2C;
+}
+
+.fable-content p {
+  margin-bottom: 1.2em;
+}
+
+/* 暗色模式寓言正文 */
+.dark .fable-content {
+  color: #e8e8e8;
+}
+
+/* 滚动条 */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #D4D4D4; border-radius: 3px; }
+.dark ::-webkit-scrollbar-thumb { background: #334155; }

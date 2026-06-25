@@ -1,0 +1,15 @@
+{
+  "name": "武林",
+  "tagline": "内力、招式、江湖恩怨",
+  "category": "武侠江湖",
+  "icon": "🥋",
+  "description": "以华山派为核心，武林盟与各门派并立的时代。内力为本招式为末，江湖规矩先礼后兵，门派存亡系于一本秘籍。用剑客、暗器高手、武僧、游侠的故事，解释一切抽象概念。",
+  "demoConcept": "熵增",
+  "theme": {
+    "primary": "#2F4F2F",
+    "secondary": "#191970",
+    "background": "#F0F0E8",
+    "textPrimary": "#1F2F1F",
+    "cardBg": "#FAFAF2"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "三国",
+  "tagline": "谋略、博弈、权力的时代",
+  "category": "历史权谋",
+  "icon": "⚔️",
+  "description": "东汉末年至三国鼎立，曹操、刘备、孙权三方逐鹿中原。用谋略、博弈和权力的交织，解释一切抽象概念。军师出谋划策，武将冲锋陷阵，一场战役的胜负往往在开战前就由谋略决定了。",
+  "demoConcept": "博弈论",
+  "theme": {
+    "primary": "#8B0000",
+    "secondary": "#DAA520",
+    "background": "#F5F0E8",
+    "textPrimary": "#3D0C0C",
+    "cardBg": "#FFFBF5"
+  }
+}
