@@ -1,5 +1,3 @@
-version: "3.8"
-
 # 开发环境：只启动后端，前端继续用 npm run dev
 services:
   backend:

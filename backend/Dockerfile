@@ -9,10 +9,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # 复制源码
 COPY src/ ./src/
-COPY .env .
 
 # 暴露端口
 EXPOSE 8000
 
-# 启动命令
+# 启动命令（环境变量通过 docker-compose env_file 注入）
 CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8000"]
