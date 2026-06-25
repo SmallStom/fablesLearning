@@ -97,6 +97,35 @@ npm run dev
 
 访问 `http://localhost:5173`。
 
+## Docker 部署
+
+### 生产环境（前端 + 后端）
+
+```bash
+# 确保 backend/.env 已配置
+docker-compose -f docker-compose.prod.yml up -d --build
+```
+
+访问 `http://localhost`。
+
+### 开发环境（只启动后端）
+
+```bash
+docker-compose -f docker-compose.dev.yml up -d --build
+```
+
+然后前端继续用 `npm run dev`。
+
+### 单独构建镜像
+
+```bash
+# 后端
+docker build -t tellme-backend ./backend
+
+# 前端
+docker build -t tellme-frontend .
+```
+
 ## 测试
 
 ```bash

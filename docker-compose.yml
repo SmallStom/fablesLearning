@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: tellme-backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/.env
+    restart: unless-stopped
+    networks:
+      - tellme-network
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tellme-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - tellme-network
+
+networks:
+  tellme-network:
+    driver: bridge

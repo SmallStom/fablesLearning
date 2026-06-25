@@ -1,0 +1,31 @@
+version: "3.8"
+
+# 生产环境：前端 + 后端，前端通过 Nginx 反向代理 API
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: tellme-backend
+    env_file:
+      - ./backend/.env
+    restart: unless-stopped
+    networks:
+      - tellme-network
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tellme-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - tellme-network
+
+networks:
+  tellme-network:
+    driver: bridge
