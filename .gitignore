@@ -49,6 +49,13 @@ test-results/
 playwright-report/
 playwright/.cache/
 
+# 测试代码（按需过滤）
+e2e/
+*.test.ts
+*.test.tsx
+vitest.config.ts
+playwright.config.ts
+
 # 缓存
 .cache/
 .mypy_cache/

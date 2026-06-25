@@ -133,17 +133,6 @@ docker build -t tellme-backend ./backend
 docker build -t tellme-frontend .
 ```
 
-## 测试
-
-```bash
-# 前端单元测试
-npm run test
-
-# E2E 测试（需要后端运行）
-npx playwright install chromium
-npm run test:e2e
-```
-
 ## 构建
 
 ```bash
