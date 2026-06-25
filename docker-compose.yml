@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     container_name: tellme-backend
     ports:
-      - "8000:8000"
+      - "${BACKEND_PORT:-8000}:8000"
     env_file:
       - ./backend/.env
     restart: unless-stopped
@@ -20,7 +20,7 @@ services:
       dockerfile: Dockerfile
     container_name: tellme-frontend
     ports:
-      - "80:80"
+      - "${FRONTEND_PORT:-80}:80"
     depends_on:
       - backend
     restart: unless-stopped

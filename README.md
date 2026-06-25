@@ -103,15 +103,22 @@ npm run dev
 
 ```bash
 # 确保 backend/.env 已配置
-docker-compose -f docker-compose.prod.yml up -d --build
+# 默认使用 80 和 8000 端口，如需修改可创建 .env.deploy
+cp .env.deploy.example .env.deploy
+# 编辑 .env.deploy 修改 BACKEND_PORT 和 FRONTEND_PORT
+
+docker-compose -f docker-compose.prod.yml --env-file .env.deploy up -d --build
 ```
 
-访问 `http://localhost`。
+访问 `http://localhost`（或你配置的 FRONTEND_PORT）。
 
 ### 开发环境（只启动后端）
 
 ```bash
-docker-compose -f docker-compose.dev.yml up -d --build
+# 默认后端端口 8000，如需修改可创建 .env.deploy
+cp .env.deploy.example .env.deploy
+
+docker-compose -f docker-compose.dev.yml --env-file .env.deploy up -d --build
 ```
 
 然后前端继续用 `npm run dev`。

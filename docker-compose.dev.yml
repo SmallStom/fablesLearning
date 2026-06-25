@@ -1,6 +1,6 @@
 version: "3.8"
 
-# 开发环境：只启动后端，前端用 npm run dev
+# 开发环境：只启动后端，前端继续用 npm run dev
 services:
   backend:
     build:
@@ -8,7 +8,7 @@ services:
       dockerfile: Dockerfile
     container_name: tellme-backend-dev
     ports:
-      - "8000:8000"
+      - "${BACKEND_PORT:-8000}:8000"
     env_file:
       - ./backend/.env
     volumes:
