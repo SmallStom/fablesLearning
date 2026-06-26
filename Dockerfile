@@ -3,13 +3,16 @@ FROM node:20 AS builder
 
 WORKDIR /app
 
+# 使用 bash 支持 pipefail
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
 # 安装依赖（使用国内 npm 镜像源加速）
 COPY package.json package-lock.json ./
 RUN npm ci --registry=https://registry.npmmirror.com
 
 # 复制源码并构建
 COPY . .
-RUN npm run build 2>&1 | tee /tmp/build.log; exit ${PIPESTATUS[0]}
+RUN npm run build 2>&1 | tee /tmp/build.log
 
 # 生产环境用 Nginx 托管
 FROM nginx:alpine
