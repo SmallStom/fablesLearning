@@ -9,7 +9,7 @@ RUN npm ci --registry=https://registry.npmmirror.com
 
 # 复制源码并构建
 COPY . .
-RUN npm run build
+RUN npm run build 2>&1 | tee /tmp/build.log; exit ${PIPESTATUS[0]}
 
 # 生产环境用 Nginx 托管
 FROM nginx:alpine
