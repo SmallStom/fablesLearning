@@ -3,9 +3,9 @@ FROM node:20-alpine AS builder
 
 WORKDIR /app
 
-# 安装依赖
+# 安装依赖（使用国内 npm 镜像源加速）
 COPY package.json package-lock.json ./
-RUN npm ci
+RUN npm ci --registry=https://registry.npmmirror.com
 
 # 复制源码并构建
 COPY . .
