@@ -16,6 +16,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        VITE_API_URL: /api
     container_name: tellme-frontend
     ports:
       - "${FRONTEND_PORT:-80}:80"

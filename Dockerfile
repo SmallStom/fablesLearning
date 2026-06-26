@@ -3,6 +3,10 @@ FROM node:20 AS builder
 
 WORKDIR /app
 
+# 构建参数：API 基础路径
+ARG VITE_API_URL=/api
+ENV VITE_API_URL=$VITE_API_URL
+
 # 使用 bash 支持 pipefail
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
