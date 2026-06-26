@@ -3,6 +3,12 @@ import type { ApiResponse } from '@/types';
 /** 后端基础地址：优先读取环境变量，默认本地 8000 端口 */
 const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
+/** 拼接请求 URL：自动处理 BASE_URL 尾斜杠与 path 首斜杠 */
+function buildUrl(path: string): string {
+  const base = BASE_URL.endsWith('/') ? BASE_URL.slice(0, -1) : BASE_URL;
+  return `${base}${path}`;
+}
+
 /** 认证 token 在 sessionStorage 中的 key（与 auth.ts 保持一致） */
 const TOKEN_KEY = 'worldview_token';
 
@@ -111,7 +117,7 @@ async function request<T>(
   body?: unknown,
   options?: { signal?: AbortSignal; headers?: Record<string, string> }
 ): Promise<T> {
-  const url = `${BASE_URL}${path}`;
+  const url = buildUrl(path);
   const init: RequestInit = {
     method,
     headers: buildHeaders(options?.headers),
@@ -148,7 +154,7 @@ export function apiGet<T>(
  * 用于分享页等无需登录的公开接口。
  */
 export async function publicGet<T>(path: string, options?: { signal?: AbortSignal }): Promise<T> {
-  const url = `${BASE_URL}${path}`;
+  const url = buildUrl(path);
   const init: RequestInit = {
     method: 'GET',
     headers: { 'Content-Type': 'application/json' },
@@ -234,7 +240,7 @@ export async function apiStream(
   body: unknown,
   signal?: AbortSignal
 ): Promise<ReadableStream<Uint8Array>> {
-  const url = `${BASE_URL}${path}`;
+  const url = buildUrl(path);
   const res = await fetch(url, {
     method: 'POST',
     headers: buildHeaders({ Accept: 'text/event-stream' }),
